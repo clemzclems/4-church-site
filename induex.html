@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awake Christian Gospel Ministry Int'l</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Include Three.js from CDN for 3D rendering -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+  <header style="background-image: linear-gradient(to bottom, #ff99cc, #ffccff);">
+    <div class="header-overlay" style="background-color: rgba(255, 255, 255, 0.7); padding: 20px;">
+      <h1 style="color: #ff0066; margin: 0;">Awake Christian Gospel Ministry Int'l</h1>
+    </div>
+    <nav>
+      <ul style="list-style: none; padding: 0; display: flex; justify-content: center; background-color: #333333;">
+        <li style="margin: 0 10px;"><a href="#services" style="color: #ffffff;">Services</a></li>
+        <li style="margin: 0 10px;"><a href="#sermons" style="color: #ffffff;">Sermons</a></li>
+        <li style="margin: 0 10px;"><a href="#events" style="color: #ffffff;">Events</a></li>
+        <li style="margin: 0 10px;"><a href="#blog" style="color: #ffffff;">Blog</a></li>
+        <li style="margin: 0 10px;"><a href="#gallery" style="color: #ffffff;">Gallery</a></li>
+        <li style="margin: 0 10px;"><a href="#video" style="color: #ffffff;">Video</a></li>
+        <li style="margin: 0 10px;"><a href="#bmdviewer" style="color: #ffffff;">3D Viewer</a></li>
+        <li style="margin: 0 10px;"><a href="#giving" style="color: #ffffff;">Give</a></li>
+        <li style="margin: 0 10px;"><a href="#volunteer" style="color: #ffffff;">Volunteer</a></li>
+        <li style="margin: 0 10px;"><a href="#contact" style="color: #ffffff;">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Services Section -->
+  <section id="services" style="background-color: #ffffcc; padding: 20px;">
+    <h2 style="color: #0066ff;">Our Services</h2>
+    <p>Join us for worship every Sunday at 9:00 AM and Bible study on Wednesdays at 6:00 PM.</p>
+  </section>
+
+  <!-- Sermon Archive Section -->
+  <section id="sermon" style="padding:20px; background-color:orange;">
+    <h2>Sermon Archive</h2>
+    <p>Watch or listen to past sermons:</p>
+    <ul>
+      <li><a href="video/sermon1.mp3" style="color:#0000ff;">Sermon: Faith in Trials</a></li>
+      <li><a href="video/sermon2.mp4" style="color:#0000ff;">Sermon: Walking in Victory</a></li>
+    </ul>
+  </section>
+
+  <!-- Upcoming Events Section -->
+  <section id="events" style="background-color: #ffcccc; padding: 20px;">
+    <h2 style="color: #ff0066;">Upcoming Events</h2>
+    <ul>
+      <li>📅 Easter Celebration - March 31</li>
+      <li>📅 Youth Revival - April 20</li>
+    </ul>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" style="background-color: #ccccff; padding: 20px;">
+    <h2 style="color: #000066;">Church Blog</h2>
+    <article>
+      <h3>How to Build Your Faith</h3>
+      <p>Faith is the foundation of a strong spiritual life...</p>
+      <a href="#" style="color: #0000ff;">Read More</a>
+    </article>
+  </section>
+
+  <!-- Photo Gallery Section -->
+ <section id="gallery" style="padding: 20px; background-color: #ffcc99;">
+    <h2>Photo Gallery</h2>
+    <div class="media-grid">
+      <!-- Assume these images are in the "image" folder -->
+      <div><img src="image/gallery1.jpg" alt="Church Service" style="width:100%;"></div>
+      <div><img src="image/gallery2.jpg" alt="Praise and Worship" style="width:100%;"></div>
+      <div><img src="image/gallery3.jpg" alt="Youth Fellowship" style="width:100%;"></div>
+      <!-- Additional gallery images as needed -->
+    </div>
+  </section>
+
+  <!-- Video Demonstration Section -->
+  <section id="video" style="background-color: #e6f7ff; padding: 20px;">
+    <h2 style="color: #005580;">Video Demonstration</h2>
+    <p>Watch our introduction video about our ministry and learn about our 3D model display feature:</p>
+    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+<iframe src="https://www.youtube.com/embed/xMvUqvrJCBY" 
+        frameborder="0" 
+        allowfullscreen 
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+</iframe>
+    </div>
+  </section>
+
+  <!-- 3D Model Viewer Section -->
+  <section id="bmdviewer" style="background-color: #f2e6ff; padding: 20px;">
+    <h2 style="color: #6600cc;">3D Model Viewer</h2>
+    <p>Upload a <code>.BMD</code> file to view its 3D model (this demo uses a basic Three.js scene; integrate your .BMD parser as needed):</p>
+    <input type="file" id="bmdFileInput" accept=".bmd">
+    <button id="loadBmdBtn" style="background-color: #6600cc; color: #ffffff;">Load Model</button>
+    <div id="viewer" style="width: 100%; height: 500px; background-color: #000; margin-top: 20px;"></div>
+  </section>
+
+  <!-- Online Giving Section -->
+  <section id="giving" style="background-color: #ccff99; padding: 20px;">
+    <h2 style="color: #009900;">Give Online</h2>
+    <p>Your generosity helps us continue our ministry.</p>
+    <a href="https://paypal.me/clemzclems?country.x=AE&locale.x=en_US" class="donate-btn" style="background-color: #ff9900; padding: 10px 20px; color: #ffffff; text-decoration: none; margin-right: 10px;">Donate via PayPal</a>
+    <a href="https://flutterwave.com" class="donate-btn" style="background-color: #ff9900; padding: 10px 20px; color: #ffffff; text-decoration: none;">Donate via Flutterwave</a>
+  </section>
+
+  <!-- Volunteer Sign-Up Section -->
+  <section id="volunteer" style="background-color: #99ccff; padding: 20px;">
+    <h2 style="color: #0066cc;">Volunteer with Us</h2>
+    <p>Sign up to serve in various ministries.</p>
+    <form>
+      <input type="text" placeholder="Your Name" required style="margin: 5px; padding: 8px;">
+      <input type="email" placeholder="Your Email" required style="margin: 5px; padding: 8px;">
+      <select required style="margin: 5px; padding: 8px;">
+        <option value="">Select Ministry</option>
+        <option value="choir">Choir</option>
+        <option value="ushering">Ushering</option>
+        <option value="media">Media</option>
+      </select>
+      <button type="submit" style="background-color: #0066cc; color: #ffffff; padding: 10px 20px;">Sign Up</button>
+    </form>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" style="background-color: #ff99cc; padding: 20px;">
+    <h2 style="color: #ff0066;">Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required style="margin: 5px; padding: 8px;">
+      <input type="email" placeholder="Your Email" required style="margin: 5px; padding: 8px;">
+      <textarea placeholder="Your Message" required style="margin: 5px; padding: 8px; width: 100%; height: 100px;"></textarea>
+      <button type="submit" style="background-color: #ff0066; color: #ffffff; padding: 10px 20px;">Send</button>
+    </form>
+  </section>
+
+  <!-- Social Media Footer -->
+  <footer style="background-color: #333333; color: #ffffff; padding: 20px; text-align: center;">
+    <p>Follow us on social media:</p>
+    <a href="https://facebook.com" style="color: #ffffff; text-decoration: none;">Facebook</a> |
+    <a href="https://instagram.com" style="color: #ffffff; text-decoration: none;">Instagram</a> |
+    <a href="https://twitter.com" style="color: #ffffff; text-decoration: none;">Twitter</a>
+    <p>&copy; 2025 Awake Christian Gospel Ministry Int'l. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JavaScript for 3D Model Viewer (Placeholder using Three.js) -->
+  <script>
+    // Initialize a basic Three.js scene in the "viewer" div
+    let scene, camera, renderer;
+    function initViewer() {
+      const viewerDiv = document.getElementById('viewer');
+      scene = new THREE.Scene();
+      camera = new THREE.PerspectiveCamera(75, viewerDiv.clientWidth / viewerDiv.clientHeight, 0.1, 1000);
+      renderer = new THREE.WebGLRenderer();
+      renderer.setSize(viewerDiv.clientWidth, viewerDiv.clientHeight);
+      viewerDiv.appendChild(renderer.domElement);
+      
+      // Add ambient light
+      const light = new THREE.AmbientLight(0xffffff);
+      scene.add(light);
+      
+      // Add a placeholder cube (replace with your .BMD model)
+      const geometry = new THREE.BoxGeometry();
+      const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+      const cube = new THREE.Mesh(geometry, material);
+      scene.add(cube);
+      
+      camera.position.z = 5;
+      animate();
+    }
+    
+    function animate() {
+      requestAnimationFrame(animate);
+      renderer.render(scene, camera);
+    }
+    
+    // Initialize the viewer once the page loads
+    window.onload = function() {
+      initViewer();
+    };
+    
+    // Basic event handler for BMD file upload (actual parsing logic not implemented)
+    document.getElementById('loadBmdBtn').addEventListener('click', function() {
+      const fileInput = document.getElementById('bmdFileInput');
+      const file = fileInput.files[0];
+      if (file) {
+        // Placeholder: Replace this alert with your BMD file parsing and rendering logic.
+        alert('BMD file loaded: ' + file.name + '. 3D model parsing is not implemented in this demo.');
+      } else {
+        alert('Please select a .BMD file first.');
+      }
+    });
+  </script>
+</body>
+</html>
